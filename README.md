@@ -30,7 +30,7 @@ source .venv/bin/activate
 streamlit run app.py
 ```
 
-Enter a city (e.g. `Austin, US`) and submit. Results use **imperial** units (°F, mph) and are cached for five minutes.
+Enter a city (e.g. `Austin, US`) and submit. After results load, use **Save this city** under the chart to persist it; open the sidebar to **Fetch** saved cities. Results use **imperial** units (°F, mph) and are cached for five minutes.
 
 ## Run the CLI (optional)
 
@@ -46,5 +46,6 @@ You will be prompted for a city name.
 | File | Role |
 |------|------|
 | `app.py` | Streamlit UI |
+| `saved_cities.py` | Persisted saved-city list (`saved_cities.json`) |
 | `weather.py` | `fetch_weather()` + CLI |
 | `requirements.txt` | Dependencies |

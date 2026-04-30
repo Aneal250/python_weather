@@ -13,7 +13,6 @@ _DATA_PATH = Path(__file__).resolve().parent / "saved_cities.json"
 def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
-
 def load_entries() -> list[dict]:
     """Return list of {"id", "city", "saved_at"}; ensure each row has an id."""
     if not _DATA_PATH.is_file():
@@ -70,7 +69,7 @@ def upsert_city(city: str) -> list[dict]:
     write_entries(entries)
     return entries
 
-
+                                                                                                                                                                
 def format_saved_at(iso: str) -> str:
     """Format stored ISO UTC time for display (local timezone)."""
     try:
